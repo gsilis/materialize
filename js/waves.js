@@ -330,9 +330,11 @@
     };
 
     window.Waves = Waves;
+    Waves.onDomContentLoaded = function() {
+      document.removeEventListener('DOMContentLoaded', this);
+      Waves.displayEffect();
+    };
 
-    document.addEventListener('DOMContentLoaded', function() {
-        Waves.displayEffect();
-    }, false);
+    document.addEventListener('DOMContentLoaded', Waves.onDomContentLoaded, false);
 
 })(window);
