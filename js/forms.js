@@ -102,7 +102,7 @@
         $(this).addClass('tabbed');
         var $this = $(this);
         $this.one('blur', function(e) {
-          console.log(e);
+          
           $(this).removeClass('tabbed');
         });
         return;
