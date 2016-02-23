@@ -329,7 +329,7 @@
         element.addEventListener('mousedown', showEffect, false);
     };
 
-    window.Waves = Waves;
+    //window.Waves = Waves;
     Waves.onDomContentLoaded = function() {
       document.removeEventListener('DOMContentLoaded', this);
       Waves.displayEffect();

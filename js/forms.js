@@ -1,6 +1,8 @@
 (function ($) {
   $(document).ready(function() {
 
+    var validate_field;
+
     // Function to update labels of text fields
     Materialize.updateTextFields = function() {
       var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], textarea';
@@ -66,7 +68,7 @@
       validate_field($inputElement);
     });
 
-    window.validate_field = function(object) {
+    validate_field = function(object) {
       var hasLength = object.attr('length') !== undefined;
       var lenAttr = parseInt(object.attr('length'));
       var len = object.val().length;
